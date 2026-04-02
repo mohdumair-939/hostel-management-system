@@ -17,7 +17,7 @@ import com.hostel.backend.repository.StudentRepository;
 
 @RestController
 @RequestMapping("/students")
-@CrossOrigin
+@CrossOrigin(origins = "*")
 public class StudentController {
 
     private final StudentRepository studentRepository;
