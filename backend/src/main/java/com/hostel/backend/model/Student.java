@@ -1,9 +1,6 @@
 package com.hostel.backend.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
 public class Student {
@@ -15,10 +12,12 @@ public class Student {
     private String name;
     private String rollNumber;
     private String branch;
+
+    @Column(name = "student_year")
     private int year;
+
     private String phone;
 
-    // Constructors
     public Student() {}
 
     public Student(String name, String rollNumber, String branch, int year, String phone) {
@@ -29,7 +28,6 @@ public class Student {
         this.phone = phone;
     }
 
-    // Getters & Setters
     public Long getId() { return id; }
 
     public String getName() { return name; }
